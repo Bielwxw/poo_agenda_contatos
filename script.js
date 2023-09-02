@@ -71,6 +71,8 @@ const listaDeContatos = {
         "5- Cancelar"
         );
         let opcaoEdit = parseInt(prompt('>> '));
+        if (opcaoEdit === 5) return;
+
         let valueTelefone = false;
         let valueNome = false;
         let valueEmail = false;
