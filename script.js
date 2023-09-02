@@ -1,4 +1,4 @@
-//? Depencências 
+//? Dependencências 
 const prompt = require("prompt-sync") ({sigint: false});
 
 //? Classes e Objetos
