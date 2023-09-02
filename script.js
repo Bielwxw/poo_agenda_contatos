@@ -20,11 +20,14 @@ class Contato {
     atualizarTelefone(novoTelefone) {
         this._telefone = novoTelefone;
     }
-    mostrarDados() {
-        console.log(`\nID: ${this._id}\nTelefone: ${this._telefone}\nNome: ${this._nome}\nEmail: ${this._email}\n`);
-    }
     retornaID() {
         return this._id;
+    }
+    temNomePesquisado(text) {
+        return this._nome.toLowerCase().includes(text.toLowerCase());
+    }
+    mostrarDados() {
+        console.log(`\nID: ${this._id}\nTelefone: ${this._telefone}\nNome: ${this._nome}\nEmail: ${this._email}\n`);
     }
 }
 
@@ -125,7 +128,23 @@ const listaDeContatos = {
         linha();
     },
 
-    pesquisarContato: function() {},
+    pesquisarContato: function() {
+        console.log("Digite o nome a ser pesquisado:");
+        let nome = prompt(">> ").trim().replace(/ +/g, " ");
+
+        let listaPesquisa = this._lista.filter(obj => {
+            return obj.temNomePesquisado(nome);
+        });
+
+        linha();
+        if (listaPesquisa.length === 0) {
+            console.log("Nenhum contato com esse nome!!!");
+        }
+        for (const contato of listaPesquisa) {
+            contato.mostrarDados();
+        }
+        linha();
+    },
 
     _selecionarContato: function() {
         console.log("\nDigite o ID do Contato:");
