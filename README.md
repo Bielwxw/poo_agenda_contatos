@@ -14,15 +14,7 @@ Orientador: Ricardo Nunes
    - Todos os requisitos propostos foram atendidos. 
 
 2. Há algum problema/erro identificado?
-   - No decorrer do desenvolvimento de nosso projeto tivemos alguns empecilhos, mas que foram resolvidos. Como, por exemplo, utilizamos o trim() para remover os espaços desnecessários no início e no final da string, pois sem esse ajuste, ocorriam nomes como:
-'   Jorge   S.'
-E foi feita uma verificação para garantir que o usuário preenchesse os campos de texto, caso o contrário, isso poderia acontecer:
-   {
-   id: '',
-   nome: '',
-   telefone: '',
-   email: ''
-   }
+   - No decorrer do desenvolvimento de nosso projeto tivemos alguns empecilhos, mas que foram resolvidos. Como, por exemplo, utilizamos o trim() para remover os espaços desnecessários no início e no final da string. E foi feita uma verificação para garantir que o usuário preenchesse os campos de texto caso o contrário o objeto iria voltar vazio.
    Também houve erro no método editarContato(), pois as variáveis eram criadas dentro do If e, posteriormente, não podiam ser chamadas. 
    Além disso, houve um problema no RegEx do email e para solucioná-lo pegamos a referência em um site.
 
