@@ -36,19 +36,17 @@ const listaDeContatos = {
     adicionarContato: function() {
         console.log("\nDigite o Telefone:");
         let telefone = prompt(">> ").trim().replace(/ +/g, ' ');
-        let valueTelefone = this._verificarTelefone(telefone);
+        if (!this._verificarTelefone(telefone)) return;
 
         console.log("\nDigite o Nome:");
         let nome = prompt(">> ").trim().replace(/ +/g, ' ');
-        let valueNome = this._verificarNome(nome);
+        if (!this._verificarNome(nome)) return;
 
         console.log("\nDigite o Email:");
         let email = prompt(">> ").trim().replace(/ +/g, ' ');
-        let valueEmail = this._verificarEmail(email);
+        if (!this._verificarEmail(email)) return;
 
-        if (valueEmail && valueNome && valueTelefone) {
-            this._lista.push(new Contato(telefone, nome, email));
-        }
+        this._lista.push(new Contato(telefone, nome, email));
     },
 
     visualizarLista: function() {
@@ -121,7 +119,10 @@ const listaDeContatos = {
     excluirContato: function() {
         linha();
         let contato = this._selecionarContato();
-        if (contato === undefined) {linha(); return;}
+        if (contato === undefined) {
+            linha();
+            return;
+        }
         let index = this._lista.indexOf(contato);
         this._lista.splice(index, 1);
         console.log("\nContato Excluído com Sucesso!");
