@@ -72,7 +72,10 @@ const listaDeContatos = {
         "5- Cancelar"
         );
         let opcaoEdit = parseInt(prompt('>> '));
-        if (opcaoEdit === 5) return;
+        if (opcaoEdit !== 1 && opcaoEdit !== 2 && opcaoEdit !== 3 && opcaoEdit !== 4) {
+            linha();
+            return;
+        }
 
         let valueTelefone = false;
         let valueNome = false;
@@ -139,7 +142,7 @@ const listaDeContatos = {
 
         linha();
         if (listaPesquisa.length === 0) {
-            console.log("Nenhum contato com esse nome!!!");
+            console.log("\nNenhum contato com esse nome!!!");
         }
         for (const contato of listaPesquisa) {
             contato.mostrarDados();
@@ -151,7 +154,6 @@ const listaDeContatos = {
         console.log("\nDigite o ID do Contato:");
         let id = parseInt(prompt(">> "));
         let obj = this._lista.find(contato => {return contato.retornaID() === id});
-
         if (obj === undefined) console.log("Contato inválido\n");
         return obj;
     },
