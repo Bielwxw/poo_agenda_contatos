@@ -15,8 +15,8 @@ Orientador: Ricardo Nunes
 
 2. Há algum problema/erro identificado?
    - No decorrer do desenvolvimento de nosso projeto tivemos alguns empecilhos, mas que foram resolvidos. Como, por exemplo, utilizamos o trim() para remover os espaços desnecessários no início e no final da string, pois sem esse ajuste, ocorriam nomes como:
-   '       Jorge    S.'
-   E foi feita uma verificação para garantir que o usuário preenchesse os campos de texto, caso o contrário, isso poderia acontecer:
+'       Jorge    S.'
+E foi feita uma verificação para garantir que o usuário preenchesse os campos de texto, caso o contrário, isso poderia acontecer:
    {
    id: '',
    nome: '',
