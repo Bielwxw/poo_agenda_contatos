@@ -11,13 +11,24 @@ Orientador: Ricardo Nunes
 
 ## Perguntas
 1. Tudo o que foi pedido foi realizado? Faltou algo?
-   - resposta
+   - Todos os requisitos propostos foram atendidos. 
 
 2. Há algum problema/erro identificado?
-   - resposta
+   - No decorrer do desenvolvimento de nosso projeto tivemos alguns empecilhos, mas que foram resolvidos. Como, por exemplo, utilizamos o trim() para remover os espaços desnecessários no início e no final da string, pois sem esse ajuste, ocorriam nomes como:
+   '       Jorge    S.'
+   E foi feita uma verificação para garantir que o usuário preenchesse os campos de texto, caso o contrário, isso poderia acontecer:
+   {
+   id: '',
+   nome: '',
+   telefone: '',
+   email: ''
+   }
+   Também houve erro no método editarContato(), pois as variáveis eram criadas dentro do If e, posteriormente, não podiam ser chamadas. 
+   Além disso, houve um problema no RegEx do email e para solucioná-lo pegamos a referência em um site.
 
 3. Descrição da experiência:
-   - resposta
+   - Tivemos algumas dificuldades na execução de algumas partes do código, mas com o auxílio de alguns materiais de pesquisa conseguimos compreender e corrigir nossos erros. 
+   Dividimos nosso código em seções, para que fosse  melhor entendido e explicado.
 
 4. Dificuldades encontradas:
    - Saber onde e quando colocar propriedades e métodos privado
